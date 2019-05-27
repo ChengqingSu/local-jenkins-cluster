@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+docker volume rm jenkins-master jenkins-worker
+docker image rm jenkins-cluster_master

@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+cd $(dirname $0)/..
+
+docker volume create --name jenkins-master > /dev/null
+docker volume create --name jenkins-worker > /dev/null
+docker-compose build master
+docker-compose up -d
